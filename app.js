@@ -1,5 +1,7 @@
 const express = require("express");
 const connectDb = require("./connectDb");
+const cors = require("cors");
+
 const {
   createTodo,
   getAllTodos,
@@ -9,6 +11,7 @@ const {
 } = require("./controllers");
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 //Get all todos GET /api/todos

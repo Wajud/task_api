@@ -69,7 +69,7 @@ const updateTodo = async (req, res) => {
       .status(201)
       .json({ message: "Successfully updated todo", data: returnedTodo });
   } catch (err) {
-    console.error("An error occurred: ", error);
+    console.error("An error occurred: ", err);
   }
 };
 
